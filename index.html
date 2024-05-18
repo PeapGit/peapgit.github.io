@@ -8,6 +8,12 @@
         animation: fadeInAnimation ease 3s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
+        display: flex; /* Use Flexbox to center content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Make body full height */
+        margin: 0; /* Remove default margin */
+        background-color: #133f00; /* Background color */
     }
 
     h {
@@ -74,46 +80,6 @@ body {
   100% { opacity: 1; }
 }
 
-/* Style for the button */
-button {
-  padding: 20px 40px; /* Increase padding */
-  font-size: 24px; /* Increase font size */
-  border-radius: 10px; /* Add border radius */
-  background-color: #39ff00; /* Set background color */
-  color: white; /* Set text color */
-  border: none; /* Remove border */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-.member {
-  width: 250px; 
-  height: 300px; 
-  background-color: blue;
-  position: absolute;
-  top: 90%; /* Position below the original squares */
-  left: 950px; 
-  border-radius: 20px; 
-  animation: appear 1s forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.member:nth-child(1) {
-    left: 0%;
-}
-
-.member:nth-child(2) {
-  left: 50%;
-  font-size: 100px;
-  text-align: center;
-}
-
-.member:nth-child(3) {
-  left: 70%;
-}
-
 /* Hide the audio player */
 audio {
   position: absolute;
@@ -149,9 +115,13 @@ audio {
   <img src="assets/peap.png" alt="Peap Icon" style="width: 100px;height: 100x; position: absolute; top: 10%; left: 35%;">
 </div>
 <div class="square">
-  <input type="range" class="volume-slider" min="0" max="100" value="50" step="1">
-  <h style="font-size: 50px; position: relative; top: -325px;">Current Orgs:</h>
+  <h style="font-size: 50px; position: relative; top: -80px;">Current Orgs:</h>
   <img src="assets/bromine.png" alt="Bromine logo" style="width: 100px;height: 100x; position: absolute; top: 20%; left: 35%;">
+  <h1 style="font-size: 50px; position: relative; top:5%">Linkies:</h1>
+  <a style="position: relative; top: 0%; left: 0px; font-size: 30px;" href="https://github.com/Peapgit">Github</a>
+  <a style="position: relative; top: 0%; left: 0px; font-size: 30px;" href="https://github.com/Bromine35">Bromine35 Github</a>
+  <a style="position: relative; top: 0%; left: 0px; font-size: 30px;" href="https://blog.darkn.bio/blog/3-the-tsunami">Bypass Tsnaumi 114+</a>
+  <a style="position: relative; top: 0%; left: 0px; font-size: 30px;" href="https://sketchywebsite.net">Skid link</a>
 </div>
 
 <audio id="audio" controls autoplay loop>
