@@ -26,7 +26,7 @@
       }
 
       .custom-player-killerbeast {
-        position: absolute;
+        position: absolute; /* same stuff above except for killerbeast*/
         top: 325px;
         right: 1235px;
         display: flex;
@@ -39,6 +39,7 @@
         height: 100px;
       }
 
+      /* Custom font Canva-Sans*/
       @font-face { font-family: Canva-sans; src: url('CanvaSan-Regular.otf'); } 
 
       linkies {
@@ -47,7 +48,7 @@
     </style>
 </head>
 
-<body>
+<body> <!---Audio and play/pause for it.--->
     <div class="custom-player">
       <audio id="friendsAudio" src="audio/Friends.mp3" alt="Friends audio">
         Your browser does not support the audio element.
@@ -62,7 +63,7 @@
       <img id="playPauseButton1" src="images/play.png" onclick="playPauseAudio1()">
     </div>
 
-    <div class="linkies">
+    <div class="linkies"> <!---Linkies!--->
       <a style="position: relative; top: 450px; right: -895px; font-size: 35px; color: #03f503;" href="https://github.com/Peapgit">Github</a>
       <a style="position: relative; top: 500px; right: -725px; font-size: 35px; color: #000000;" href="https://github.com/Bromine35">Bromine35 Github</a>
       <a style="position: relative; top: 550px; right: -445px; font-size: 35px; color: #C31F16;" href="https://bromine35.me">Bromine35 Website</a>
@@ -70,12 +71,13 @@
     </div>
     
     
-    <script>
+    <script> /* Get audio elements*/
       const audioElement = document.getElementById("friendsAudio");
       const audioElement1 = document.getElementById("KillerBeastAudio");
       const playPauseButton = document.getElementById("playPauseButton");
       const playPauseButton1 = document.getElementById("playPauseButton1");
       
+      /* Play pause for both songs.*/
       function playPauseAudio() {
         if (audioElement.paused) {
           audioElement.play();
