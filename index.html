@@ -3,42 +3,44 @@
 <head>
     <title>Peap's Website!</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
         margin: 0;
         padding: 0;
         height: 100vh; /* vh - viewport height */
         background-image: url("images/peap.png");
-        background-size: cover; /* Covers the entire area */
+        background-size: 100% 100%; /* Covers the entire area */
         background-position: center; /* Centers the image */
+        background-attachment: fixed;
       }
       
       .custom-player {
         position: absolute;
-        top: 325px; /* Adjust position as needed */
-        right: 90px; /* Adjust position as needed */
+        top: 44%; /* Adjust position as needed */
+        right: 6.9%; /* Adjust position as needed */
         display: flex; /* Arranges elements horizontally */
         align-items: center; /* Aligns elements vertically */
       }
       
       .custom-player img {
-        width: 100px; /* Adjust size as needed */
-        height: 100px; /* Adjust size as needed */
+        width: 6vw; /* Adjust size as needed */
+        height: 10vh; /* Adjust size as needed */
         cursor: pointer; /* Changes cursor to pointer on hover */
       }
 
       .custom-player-killerbeast {
         position: absolute; /* same stuff above except for killerbeast*/
-        top: 325px;
-        right: 1235px;
+        top: 44%;
+        right: 86%;
         display: flex;
         align-items: center;
       }
       
       .custom-player-killerbeast img{
         cursor: pointer;
-        width: 100px;
-        height: 100px;
+        width: 6vw;
+        height: 10vh;
       }
 
       /* Custom font Canva-Sans*/
