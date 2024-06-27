@@ -1,132 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Peap's Website!</title>
-<style>
-    body { /* All this style shit*/
-      /*Animation when opening page*/
-        animation: fadeInAnimation ease 3s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        display: flex; /* Use Flexbox to center content */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        height: 100vh; /* Make body full height */
-        margin: 0; /* Remove default margin */
-        background-color: #133f00; /* Background color */
-    }
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* vh - viewport height */
+        background-image: url("images/peap.png");
+        background-size: cover; /* Covers the entire area */
+        background-position: center; /* Centers the image */
+      }
+      
+      .custom-player {
+        position: absolute;
+        top: 325px; /* Adjust position as needed */
+        right: 90px; /* Adjust position as needed */
+        display: flex; /* Arranges elements horizontally */
+        align-items: center; /* Aligns elements vertically */
+      }
+      
+      .custom-player img {
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+      }
 
-    h {
-      color: #39ff00;
-    }
+      .custom-player-killerbeast {
+        position: absolute;
+        top: 325px;
+        right: 1235px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .custom-player-killerbeast img{
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+      }
 
-    h1 {
-        color: #bd1717;
-    }
-    
-    h2 {
-        color: #39ff00
-    }
+      @font-face { font-family: Canva-sans; src: url('CanvaSan-Regular.otf'); } 
 
-    @keyframes fadeInAnimation {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-</style>
-<style>
-body {
-  background-color: #133f00;
-}
-
-.square {
-  width: 350px; 
-  height: 500px; 
-  background-color: #092e4a;
-  position: absolute;
-  top: 10%; 
-  left: -50px; 
-  border-radius: 20px; /* Add this line to set the border radius */
-  animation: appear 1s forwards; /* Add animation to make squares appear */
-  display: flex; /* Add this line to center the text */
-  align-items: center; /* Add this line to center the text */
-  justify-content: center; /* Add this line to center the text */
-  flex-direction: column; /* Arrange items vertically */
-}
-
-.square:nth-child(1) {
-    left: 2%;
-}
-
-.square:nth-child(2) {
-  left: 35%; /* Second square starts at 1/3 of the screen width */
-  font-size: 100px; /* Increased font size */
-  text-align: center; /* Center the text horizontally */
-}
-
-.square:nth-child(3) {
-  left: 70%; /* Third square starts at 2/3 of the screen width */
-  display: flex; /* Add this line to enable flex layout */
-  align-items: center; /* Add this line to center the elements vertically */
-  justify-content: center; /* Add this line to center the elements horizontally */
-  flex-direction: column; /* Arrange items vertically */
-}
-
-@keyframes appear {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/* Hide the audio player */
-audio {
-  position: absolute;
-  left: -10000px; /* Move off-screen to the left */
-}
-
-/* Style for the image */
-.image {
-  position: absolute; /* Position the image absolutely within the square */
-  top: 70%; /* Center the image vertically within the square */
-  left: 30%; /* Center the image horizontally within the square */
-  transform: translate(-50%, -50%); /* Adjust the position of the image to center it correctly */
-  width: 100px; /* Set the width of the image */
-  height: 100px; /* Set the height of the image */
-}
-
-
-
-</style>
+      linkies {
+        font-family: Canva-sans;
+      }
+    </style>
 </head>
-<body> // 
-<div class="square">
-  <h2 style = "font-size: 50px; position:relative; top: 50px;">Learning:</h2>
-  <h1 style = "position:relative; left:0px; top:-280px; font-size: 45px;"> Currently Know:</h1>
-  <img src="assets/java.png" alt="Java logo" class="image">
-  <img src="assets/html.png" alt="HTML logo" style="width: 100px;height: 100x; position: absolute; top: 60.5%; left: 50%;">
-  <img src="assets/python.png" alt="HTML logo" style="width: 100px;height: 100x; position: absolute; top: 20%; left: 50%;">
-  <img src="assets/bash.png" alt="Bash logo" style="width: 100px;height: 100x; position: absolute; top: 20%; left: 15%;">
-</div>
-<div class="square">
-  <h1 style="font-size: 90px;">Peap</h1>
-  <h2 style="font-size: 25px;">Bird Owner of Bromine35 and his IP address is...</h2>
-  <img src="assets/peap.png" alt="Peap Icon" style="width: 100px;height: 100x; position: absolute; top: 10%; left: 35%;">
-</div>
-<div class="square">
-  <h style="font-size: 50px; position: relative; top: -70px;">Current Orgs:</h>
-  <img src="assets/bromine.png" alt="Bromine logo" style="width: 100px;height: 100x; position: absolute; top: 15%; left: 35%;">
-  <h1 style="font-size: 50px; position: relative; top:7%">Linkies:</h1>
-  <a style="position: relative; top: 0%; left: 0px; font-size: 30px; color: #ffffff;" href="https://github.com/Peapgit">Github</a>
-  <a style="position: relative; top: 0%; left: 0px; font-size: 30px; color: #ffffff;" href="https://github.com/Bromine35">Bromine35 Github</a>
-  <a style="position: relative; top: 0%; left: 0px; font-size: 30px; color: #ffffff;" href="https://blog.darkn.bio/blog/3-the-tsunami">Bypass Tsnaumi 114+</a>
-  <a style="position: relative; top: 0%; left: 0px; font-size: 30px; color: #ffffff;" href="https://bromine35.netlify.app">Bromine35 Website</a>
-  <a style="position: relative; top: 0%; left: 0px; font-size: 30px; color: #ffffff;" href="https://sketchywebsite.net">Skid link</a>
-</div>
 
-<audio id="audio" controls autoplay loop>
-  <source src="/assets/music.mp3" type="audio/mpeg">
-</audio>
+<body>
+    <div class="custom-player">
+      <audio id="friendsAudio" src="audio/Friends.mp3" alt="Friends audio">
+        Your browser does not support the audio element.
+      </audio>
+      <img id="playPauseButton" src="images/play.png" onclick="playPauseAudio()">
+    </div>
+
+    <div class="custom-player-killerbeast">
+      <audio id="KillerBeastAudio" src="audio/KillerBeast.mp3" alt="KillerBeast audio">
+        Your browser does not support the audio element.
+      </audio>
+      <img id="playPauseButton1" src="images/play.png" onclick="playPauseAudio1()">
+    </div>
+
+    <div class="linkies">
+      <a style="position: relative; top: 450px; right: -895px; font-size: 35px; color: #03f503;" href="https://github.com/Peapgit">Github</a>
+      <a style="position: relative; top: 500px; right: -725px; font-size: 35px; color: #000000;" href="https://github.com/Bromine35">Bromine35 Github</a>
+      <a style="position: relative; top: 550px; right: -445px; font-size: 35px; color: #C31F16;" href="https://bromine35.me">Bromine35 Website</a>
+      <a style="position: relative; top: 600px; right: -235px; font-size: 35px; color: #f3a637;" href="https://Sketchywebsite.net">Skid Link</a>
+    </div>
+    
+    
+    <script>
+      const audioElement = document.getElementById("friendsAudio");
+      const audioElement1 = document.getElementById("KillerBeastAudio");
+      const playPauseButton = document.getElementById("playPauseButton");
+      const playPauseButton1 = document.getElementById("playPauseButton1");
+      
+      function playPauseAudio() {
+        if (audioElement.paused) {
+          audioElement.play();
+          playPauseButton.src = "images/pause.png";
+        } else {
+          audioElement.pause();
+          playPauseButton.src = "images/play.png";
+        }
+      }
+
+      function playPauseAudio1() {
+        if (audioElement1.paused) {
+          audioElement1.play();
+          playPauseButton1.src = "images/pause.png";
+        } else {
+          audioElement1.pause();
+          playPauseButton1.src = "images/play.png";
+        }
+      }
+    </script>
 </body>
 </html>
