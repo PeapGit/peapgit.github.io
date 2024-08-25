@@ -1,106 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Peap's Website!</title>
-    <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background with Rounded Square</title>
+    <meta property="og:image" content="assets/images/favicon.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100vh; /* vh - viewport height */
-        background-image: url("images/peap.png");
-        background-size: 100% 100%; /* Covers the entire area */
-        background-position: center; /* Centers the image */
-        background-attachment: fixed;
-      }
-      
-      .custom-player {
-        position: absolute;
-        top: 44%; /* Adjust position as needed */
-        right: 6.9%; /* Adjust position as needed */
-        display: flex; /* Arranges elements horizontally */
-        align-items: center; /* Aligns elements vertically */
-      }
-      
-      .custom-player img {
-        width: 6vw; /* Adjust size as needed */
-        height: 10vh; /* Adjust size as needed */
-        cursor: pointer; /* Changes cursor to pointer on hover */
-      }
-
-      .custom-player-killerbeast {
-        position: absolute; /* same stuff above except for killerbeast*/
-        top: 44%;
-        right: 86%;
-        display: flex;
-        align-items: center;
-      }
-      
-      .custom-player-killerbeast img{
-        cursor: pointer;
-        width: 6vw;
-        height: 10vh;
-      }
-
-      /* Custom font Canva-Sans*/
-      @font-face { font-family: Canva-sans; src: url('CanvaSan-Regular.otf'); } 
-
-      linkies {
-        font-family: Canva-sans;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #2ab9aa, #6014a8);
+        }
+        .square {
+            width: 375px;
+            height: 500px;
+            background: linear-gradient(to bottom right, #5100ff, #ff0000);
+            border-radius: 20px; /* Rounded edges */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            
+        }
+        .peap {
+            position: relative;
+            left: 130px;
+            top: 50px;
+        }
+        .peaptxt {
+            position: relative;
+            color: #05df63; /*useless should've just did style in the tag. but im lazy rn so leave it. */
+            top: 50px;
+            right: -148px;
+        }
+        .image {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+        }
+        .footer {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            top: 90%;
+            background: linear-gradient(to bottom, #05df63, #05df63);
+            border-radius: 20px;
+        }
+        .linkbox {
+            position: relative;
+            width: 220px;
+            height: 50px;
+            top: 30%;
+            right: -80px;
+            background: linear-gradient(to top right, #5100ff, #2ab9aa);
+            border-radius: 20px;
+        }
+        .linkbox2 {
+            position: relative;
+            width: 220px;
+            height: 50px;
+            top: 31%;
+            right: -80px;
+            background: linear-gradient(to top right, #5100ff, #2ab9aa);
+            border-radius: 20px;
+        }
+        .linkbox3 {
+            position: relative;
+            width: 220px;
+            height: 50px;
+            top: 32%;
+            right: -80px;
+            background: linear-gradient(to top right, #5100ff, #2ab9aa);
+            border-radius: 20px;
+        }
     </style>
 </head>
-
-<body> <!---Audio and play/pause for it.--->
-    <div class="custom-player">
-      <audio id="friendsAudio" src="audio/Friends.mp3" alt="Friends audio">
-        Your browser does not support the audio element.
-      </audio>
-      <img id="playPauseButton" src="images/play.png" onclick="playPauseAudio()">
+<body>
+    <div class="square">
+        <div class="peap">
+            <img src="assets/images/favicon.png" height="100px" width="100px">
+        </div>
+        <div class="peaptxt">
+            <h1 style="position: absolute; left: -10px;">Peap</h1>
+        </div>
+        <p style="position: absolute; color: #05df63; bottom: 390px; left: 600px;">im peap and bromine35 == cool</p>
+        <div class="image">
+            <img src="assets/images/java.png" class="image" alt="Java logo" style="position: absolute; top: 315px; left: 25px;">
+            <img src="assets/images/html.png" class="image" alt="HTML logo" style="position: absolute; top: 315px; left: 115px;">
+            <img src="assets/images/python.png" class="image" alt="python logo" style=" position: absolute; top: 315px; left: 205px;">
+            <img src="assets/images/bash.png" class="image" alt="Bash logo" style="position: absolute; top: 315px; left: 290px;">
+            <!--although it works images have stupid background. fix it later.-->
+        </div>
+        <div class="linkbox"> <!--linkies!-->
+            <h5 style="position: relative; right: -70px; bottom: -12.5px;"><a href="https://discord.com/users/769374081991835659" style="color: #05df63;">Discord</a></h5>
+        </div>
+        <div class="linkbox2">
+            <h5 style="position: relative; right: -70px; bottom: -12.5px;"><a href="https://github.com/peapgit" style="color: #df0531;">Github</a></h5>
+        </div>
+        <div class="linkbox3">
+            <h5 style="position: relative; right: -70px; bottom: -12.5px;"><a href="https://sketchywebsite.net" style="color: #0ad1eb;">Skid Link</a></h5>
+        </div>
     </div>
-
-    <div class="custom-player-killerbeast">
-      <audio id="KillerBeastAudio" src="audio/KillerBeast.mp3" alt="KillerBeast audio">
-        Your browser does not support the audio element.
-      </audio>
-      <img id="playPauseButton1" src="images/play.png" onclick="playPauseAudio1()">
+    <div class="footer">
+        <h5 style="position: relative; left: 5%; top: 5%;">Particles courtesy of lunarion :3 -Peap</h5>
     </div>
-
-    <div class="linkies"> <!---Linkies!--->
-      <a style="position: relative; top: 450px; right: -895px; font-size: 35px; color: #03f503;" href="https://github.com/Peapgit">Github</a>
-      <a style="position: relative; top: 500px; right: -725px; font-size: 35px; color: #000000;" href="https://github.com/Bromine35">Bromine35 Github</a>
-      <a style="position: relative; top: 550px; right: -445px; font-size: 35px; color: #C31F16;" href="https://bromine35.me">Bromine35 Website</a>
-      <a style="position: relative; top: 600px; right: -235px; font-size: 35px; color: #f3a637;" href="https://Sketchywebsite.net">Skid Link</a>
-    </div>
-    
-    
-    <script> /* Get audio elements*/
-      const audioElement = document.getElementById("friendsAudio");
-      const audioElement1 = document.getElementById("KillerBeastAudio");
-      const playPauseButton = document.getElementById("playPauseButton");
-      const playPauseButton1 = document.getElementById("playPauseButton1");
-      
-      /* Play pause for both songs.*/
-      function playPauseAudio() {
-        if (audioElement.paused) {
-          audioElement.play();
-          playPauseButton.src = "images/pause.png";
-        } else {
-          audioElement.pause();
-          playPauseButton.src = "images/play.png";
-        }
-      }
-
-      function playPauseAudio1() {
-        if (audioElement1.paused) {
-          audioElement1.play();
-          playPauseButton1.src = "images/pause.png";
-        } else {
-          audioElement1.pause();
-          playPauseButton1.src = "images/play.png";
-        }
-      }
-    </script>
+    <canvas id="sparkleCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas> <!--Particles courtesy of lunarion :3-->
+    <script src="sparkles.js"></script> 
 </body>
 </html>
