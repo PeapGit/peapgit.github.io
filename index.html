@@ -36,6 +36,12 @@
             box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);
         }
 
+        .tilt-card {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.2s;
+        }
+
         .peap {
             display: flex;
             justify-content: center;
@@ -110,7 +116,7 @@
 </head>
 
 <body>
-    <div class="square">
+    <div class="square tilt-card">
         <div class="peap">
             <img src="./assets/images/favicon.png" height="6.25rem" width="6.25rem" alt="peap logo">
         </div>
@@ -147,6 +153,7 @@
     <canvas id="sparkleCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
     <!--Particles courtesy of lunarion :3-->
     <script src="./sparkles.js"></script>
+    <script src="./tilt-card.js"></script>
 </body>
 
 </html>
