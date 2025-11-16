@@ -21,8 +21,8 @@ body {
 }
 
 .footer {
-    margin-top: auto;
-    width: 100%;
+    flex-shrink: 0;
+    width: 100vw;
     text-align: center;
     padding: calc(0.9rem * var(--card-scale)) 0 calc(1.2rem * var(--card-scale));
     color: #ffffff;
