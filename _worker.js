@@ -1,7 +1,7 @@
 export default {
     async fetch(request, env, ctx) {
         const url = new URL(request.url);
-        
+
         if (url.pathname === "/assets/images/logo.png") {
             const now = new Date();
             const month = now.getUTCMonth() + 1;  // 1–12
