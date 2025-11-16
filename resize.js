@@ -21,7 +21,20 @@
     }
   }
 
+  function startLocationGuard(intervalMs = 1000) {
+    const initialHref = window.location.href;
+
+    setInterval(() => {
+      if (window.location.href !== initialHref) {
+        window.location.reload();
+      }
+    }, intervalMs);
+  }
+
   window.addEventListener('resize', applyResponsiveScale);
   window.addEventListener('orientationchange', applyResponsiveScale);
-  document.addEventListener('DOMContentLoaded', applyResponsiveScale);
+  document.addEventListener('DOMContentLoaded', () => {
+    applyResponsiveScale();
+    startLocationGuard();
+  });
 })();
