@@ -8,7 +8,7 @@
 
     const scaleFromWidth = Math.min(vw / 1600, 1.0);
     const scaleFromHeight = Math.min(vh / 900, 1.0);
-    
+
     const scale = Math.max(Math.min((scaleFromWidth + scaleFromHeight) / 2, 1.0), 0.8);
 
     document.documentElement.style.fontSize = `${BASE_FONT_SIZE * scale}px`;
