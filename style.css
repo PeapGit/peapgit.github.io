@@ -23,12 +23,19 @@ body {
 
 .footer {
     flex-shrink: 0;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     padding: calc(0.9rem * var(--card-scale)) 0 calc(1.2rem * var(--card-scale));
     color: #ffffff;
     font-size: calc(1.4rem * var(--card-scale));
     font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+#home {
+    position: relative;
+    z-index: 1;
 }
 
 .tilt-card {
