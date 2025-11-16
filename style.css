@@ -8,10 +8,22 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom right, #2ab9aa, #0086d1);
     overflow: hidden;
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: calc(0.9rem * var(--card-scale)) 0 calc(1.2rem * var(--card-scale));
+    color: #ffffff;
+    font-size: calc(1.4rem * var(--card-scale));
+    font-weight: 500;
+    opacity: 0.98;
 }
 
 .tilt-card {
@@ -28,7 +40,7 @@ body {
 }
 
 .tilt-card.blurry-card {
-    max-width: 300px;
+    max-width: 345px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -39,7 +51,7 @@ body {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: calc(15px * var(--card-scale));
-    padding: calc(20px * var(--card-scale));
+    padding: calc(15px * var(--card-scale));
     width: auto;
     height: auto;
     display: flex;
@@ -50,7 +62,7 @@ body {
 
 .subtitle {
     color: white;
-    margin-top: calc(10px * var(--card-scale));
+    margin-top: calc(14px * var(--card-scale));
     font-size: calc(3rem * var(--card-scale));
     font-weight: bold;
 }
@@ -59,9 +71,10 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: calc(200px * var(--card-scale));
-    height: calc(200px * var(--card-scale));
-    margin-bottom: calc(20px * var(--card-scale));
+    width: calc(180px * var(--card-scale));
+    height: calc(180px * var(--card-scale));
+    margin-top: calc(24px * var(--card-scale));
+    margin-bottom: calc(18px * var(--card-scale));
 }
 
 .card-socials {
