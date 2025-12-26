@@ -6,8 +6,8 @@
         var now = new Date();
         var month = now.getUTCMonth() + 1;
         var day = now.getUTCDate();
-        
-        var isChristmas = (month === 11) || (month === 12);
+
+        var isChristmas = (month === 12 && day <= 25);
 
         var src = isChristmas
             ? 'assets/images/christmas.png'
