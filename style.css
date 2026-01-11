@@ -134,3 +134,28 @@ body {
     line-height: 1.5;
     text-align: left;
 }
+
+.btn-link {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 10px;
+    background: rgba(61, 137, 201, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.2s ease, border-color 0.2s ease;
+}
+.btn-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
+    filter: brightness(1.06);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.btn-link:active {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.26);
+}
